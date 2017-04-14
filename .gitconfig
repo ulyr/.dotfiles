@@ -1,0 +1,29 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Vadim
+	email = vadimgolic1@gmail.com
+[push]
+      default = simple
+          followTags = true
+[core]
+  #npm install -g diff-so-fancy
+  editor = vim
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[alias]
+  visual=gitk --all &
+  co = checkout
+  ci = commit
+  st = status -sb
+  br = branch
+  f = fetch --all --prune
+  p = push
+  c = cherry-pick
+  hist=log --pretty=format:\"%C(auto)%h %ad (%cr) %s%d [%Cgreen %an %Creset]\" --graph --date=short
+  hista=log --pretty=format:\"%C(auto)%h %ad (%cr) %s%d [%Cgreen %an %Creset]\" --graph --date=short --all
+  h=log --pretty=format:\"%C(auto)%h %ad (%cr) %s%d [%Cgreen %an %Creset]\" --graph --date=short --all
+[pack]
+  windowMemory = 0
+  SizeLimit = 0
+[gc]
+  auto = 0
